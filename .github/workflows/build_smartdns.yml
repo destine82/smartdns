@@ -18,11 +18,16 @@ jobs:
             build-essential autoconf automake pkg-config \
             libssl-dev zlib1g-dev
 
+      - name: Clone SmartDNS source
+        run: |
+          mkdir -p src
+          git clone --depth=1 https://github.com/pymumu/smartdns src
+
       - name: Run build-pkg.sh for x86_64
         run: |
           cd package
           chmod +x build-pkg.sh
-          ./build-pkg.sh --platform openwrt --arch x86-64
+          ./build-pkg.sh --platform openwrt --arch x86-64 --source-dir ../src
 
       - name: Upload result
         uses: actions/upload-artifact@v4
