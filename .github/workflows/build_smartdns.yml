@@ -36,7 +36,7 @@ jobs:
           find package/output -type f -name "*.ipk" || echo "❌ 没有找到 .ipk 文件"
 
       - name: Upload .ipk result (auto-detect)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: smartdns-ipk
           path: |
