@@ -21,13 +21,14 @@ jobs:
       - name: Clone SmartDNS source
         run: |
           rm -rf src
-          git clone --depth=1 https://github.com/pymumu/smartdns src/smartdns
+          mkdir -p package/src
+          git clone --depth=1 https://github.com/pymumu/smartdns package/src/smartdns
 
       - name: Run build-pkg.sh for x86_64
         run: |
           cd package
           chmod +x build-pkg.sh
-          ./build-pkg.sh --platform openwrt --arch x86-64 --source-dir ../src
+          ./build-pkg.sh --platform openwrt --arch x86-64
 
       - name: Upload result
         uses: actions/upload-artifact@v4
