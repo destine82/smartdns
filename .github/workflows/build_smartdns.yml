@@ -20,6 +20,7 @@ jobs:
 
       - name: Clone SmartDNS source
         run: |
+          rm -rf src
           mkdir -p src
           git clone --depth=1 https://github.com/pymumu/smartdns src
 
