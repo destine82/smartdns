@@ -35,8 +35,10 @@ jobs:
           echo "查找所有 .ipk 输出："
           find package/output -type f -name "*.ipk" || echo "❌ 没有找到 .ipk 文件"
 
-      - name: Upload result
-        uses: actions/upload-artifact@v4
+      - name: Upload .ipk result (auto-detect)
+        uses: actions/upload-artifact@v3
         with:
           name: smartdns-ipk
-          path: package/output/openwrt/x86-64/*.ipk
+          path: |
+            package/output/**/*.ipk
+            output/**/*.ipk
