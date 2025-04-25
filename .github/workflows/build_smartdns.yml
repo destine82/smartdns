@@ -22,7 +22,7 @@ jobs:
         run: |
           cd package
           chmod +x build-pkg.sh
-          ./build-pkg.sh openwrt x86_64
+          ./build-pkg.sh -h
 
       - name: Upload result
         uses: actions/upload-artifact@v4
