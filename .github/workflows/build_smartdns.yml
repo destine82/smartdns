@@ -21,8 +21,8 @@ jobs:
       - name: Download OpenWrt SDK for x86_64
         run: |
           wget https://downloads.openwrt.org/releases/22.03.5/targets/x86/64/openwrt-sdk-22.03.5-x86-64_gcc-11.2.0_musl.Linux-x86_64.tar.xz
-          tar -xf openwrt-sdk-*.tar.xz
-          mv openwrt-sdk-* openwrt-sdk
+          tar -xf openwrt-sdk-22.03.5-x86-64_gcc-11.2.0_musl.Linux-x86_64.tar.xz
+          mv openwrt-sdk-22.03.5-x86-64_gcc-11.2.0_musl.Linux-x86_64 openwrt-sdk
 
       - name: Move SmartDNS Makefile into SDK package dir
         run: |
