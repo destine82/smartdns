@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install build dependencies
         run: |
@@ -25,7 +25,7 @@ jobs:
           ./build-pkg.sh --type openwrt --arch x86_64
 
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: smartdns-ipk
           path: package/output/openwrt/x86_64/*.ipk
