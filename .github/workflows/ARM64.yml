@@ -20,9 +20,9 @@ jobs:
 
       - name: Download OpenWrt SDK for ARM64
         run: |
-          wget https://downloads.openwrt.org/releases/22.03.5/targets/aarch64/generic/openwrt-sdk-22.03.5-aarch64_generic_gcc-11.2.0_musl.Linux-x86_64.tar.xz
-          tar -xf openwrt-sdk-22.03.5-aarch64_generic_gcc-11.2.0_musl.Linux-x86_64.tar.xz
-          mv openwrt-sdk-22.03.5-aarch64_generic_gcc-11.2.0_musl.Linux-x86_64 openwrt-sdk
+            wget https://downloads.openwrt.org/releases/23.05.3/targets/aarch64/generic/openwrt-sdk-23.05.3-aarch64_generic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+            tar -xf openwrt-sdk-23.05.3-aarch64_generic_gcc-12.3.0_musl.Linux-x86_64.tar.xz
+            mv openwrt-sdk-23.05.3-aarch64_generic_gcc-12.3.0_musl.Linux-x86_64 openwrt-sdk
 
       - name: Move SmartDNS Makefile into SDK package dir
         run: |
