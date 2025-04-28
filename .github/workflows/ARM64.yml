@@ -38,7 +38,7 @@ jobs:
           make package/smartdns/compile V=s -j$(nproc)
 
       - name: Upload compiled .ipk
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: smartdns-arm64-ipk
           path: openwrt-sdk/bin/packages/aarch64_generic/*/smartdns_*.ipk
